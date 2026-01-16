@@ -24,3 +24,9 @@ jobs:
 
     - name: Run Maven Package
       run: mvn clean package
+
+    - name: Save the target folder
+      uses: actions/upload-artifact@v4
+      with:
+        name: maven-build-output
+        path: target/
